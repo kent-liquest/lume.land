@@ -70,6 +70,14 @@ cms.storage("my_values", new Kv({ kv }));
 export default cms;
 ```
 
+> [!note]
+>
+> If you run into `TypeError: Deno.openKv is not a function`, it means
+> `Deno.openKv() is an unstable API`.
+> 
+> Change `deno run -A -` to `deno run --unstable-kv -A -` in
+> `deno.json` > `"tasks"` > `"lume"`.
+
 ## GitHub
 
 Allows to write and read values directly from a GitHub repository using the
